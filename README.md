@@ -4,7 +4,7 @@
 [![Build status](https://img.shields.io/github/actions/workflow/status/sergray/mlflow-xgboost-proba/main.yml?branch=main)](https://github.com/sergray/mlflow-xgboost-proba/actions/workflows/main.yml?query=branch%3Amain)
 [![codecov](https://codecov.io/gh/sergray/mlflow-xgboost-proba/branch/main/graph/badge.svg)](https://codecov.io/gh/sergray/mlflow-xgboost-proba)
 [![Commit activity](https://img.shields.io/github/commit-activity/m/sergray/mlflow-xgboost-proba)](https://img.shields.io/github/commit-activity/m/sergray/mlflow-xgboost-proba)
-[![License](https://img.shields.io/github/license/sergray/mlflow-xgboost-proba)](https://img.shields.io/github/license/sergray/mlflow-xgboost-proba)
+[![License](https://img.shields.io/github/license/sergray/mlflow-xgboost-proba?cacheSeconds=600)](https://img.shields.io/github/license/sergray/mlflow-xgboost-proba?cacheSeconds=600)
 
 MLflow XGBoost flavour with probabilities
 
