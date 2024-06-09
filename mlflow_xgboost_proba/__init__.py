@@ -43,7 +43,7 @@ from mlflow.utils.model_utils import (
 )
 from mlflow.utils.requirements_utils import _get_pinned_requirement
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 
 FLAVOR_NAME = "xgboost_proba"
