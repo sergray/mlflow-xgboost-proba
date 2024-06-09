@@ -104,4 +104,4 @@ source = ["mlflow_xgboost_proba"]
 "tests/*" = ["S101"]
 
 [project.license]
-file = "LICENSE.txt"
+file = "LICENSE"
