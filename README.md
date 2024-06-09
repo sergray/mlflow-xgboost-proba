@@ -16,33 +16,34 @@ The API of the module is identical to [mlflow.xgboost](https://mlflow.org/docs/l
 
 - **Github repository**: <https://github.com/sergray/mlflow-xgboost-proba/>
 
-## Getting started with your project
+## Usage
 
-First, create a repository on GitHub with the same name as this project, and then run the following commands:
+Install package with `pip install mlflow-xgboost-proba`.
 
-```bash
-git init -b main
-git add .
-git commit -m "init commit"
-git remote add origin git@github.com:sergray/mlflow-xgboost-proba.git
-git push -u origin main
+Prepare XGBoost model and save as MLflow model:
+
+```python
+from xgboost import XGBClassifier
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+
+import mlflow_xgboost_proba
+
+# Prepare training dataset
+data = load_iris()
+X_train, X_test, y_train, y_test = train_test_split(data["data"], data["target"], test_size=0.2)
+# Prepare XGBoost model
+xgb_model = XGBClassifier(n_estimators=2, max_depth=2, learning_rate=1, objective="binary:logistic")
+xgb_model.fit(X_train, y_train)
+# Save XGBoost model as MLflow model
+mlflow_xgboost_proba.save_model(xgb_model, "mlflow_xgb_iris_classifier")
 ```
 
-Finally, install the environment and the pre-commit hooks with
+Run model inference with the probabilities using MLflow:
 
-```bash
-make install
+```shell
+mlflow models serve --model-uri mlflow_xgb_iris_classifier --env-manager local
 ```
-
-You are now ready to start development on your project!
-The CI/CD pipeline will be triggered when you open a pull request, merge to main, or when you create a new release.
-
-## Releasing a new version
-
-- Create an API Token on [Pypi](https://pypi.org/).
-- Add the API Token to your projects secrets with the name `PYPI_TOKEN` by visiting [this page](https://github.com/sergray/mlflow-xgboost-proba/settings/secrets/actions/new).
-- Create a [new release](https://github.com/sergray/mlflow-xgboost-proba/releases/new) on Github.
-- Create a new tag in the form `*.*.*`.
 
 ---
 

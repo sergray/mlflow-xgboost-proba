@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "mlflow_xgboost_proba"
+name = "mlflow-xgboost-proba"
 version = "0.1.0"
 description = "MLflow XGBoost flavour with probabilities"
 authors = ["Sergey Panfilov <sergray@gmail.com>"]
